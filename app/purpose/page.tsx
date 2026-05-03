@@ -40,7 +40,7 @@ export default function Purpose() {
           </p>
           
           <div className="bg-base-300 p-6 rounded-lg mb-4 overflow-x-auto border border-base-content border-opacity-10">
-            <pre className="text-sm font-mono">
+            <pre className="text-sm font-mono text-left whitespace-pre-wrap">
 {`# [ADR Title]
 
 ## Status

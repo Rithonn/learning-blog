@@ -27,7 +27,7 @@ export default function Sidebar() {
           onClick={() => setIsOpen(!isOpen)}
           className="p-4 hover:bg-base-300 w-full flex items-center justify-center transition-colors"
         >
-          {isOpen ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
+          {isOpen ? <ChevronLeft size={36} /> : <ChevronRight size={36} />}
         </button>
 
         {/* Navigation Links */}
@@ -40,8 +40,8 @@ export default function Sidebar() {
                 href={item.href}
                 className="px-4 py-2 rounded hover:bg-base-300 transition-colors flex items-center gap-4"
               >
-                <Icon size={24} className="flex-shrink-0" />
-                {isOpen && <span>{item.name}</span>}
+                <Icon size={32} className="flex-shrink-0" />
+                {isOpen && <span className='text-lg'>{item.name}</span>}
               </Link>
             );
           })}
