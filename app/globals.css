@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-   themes: coffee --default
+   themes: sunset --default
 }
 :root {
   --background: #ffffff;

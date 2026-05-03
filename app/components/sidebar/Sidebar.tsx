@@ -1,11 +1,11 @@
 'use client';
-
+import { useSidebar } from '@/app/context/SidebarContext';
 import { useState } from 'react';
 import Link from 'next/link';
 import { Home, FileText, BookOpen, MoreHorizontal, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useSidebar();
 
   const navItems = [
     { name: 'Home', href: '/', icon: Home },
