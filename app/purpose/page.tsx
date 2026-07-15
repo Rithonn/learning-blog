@@ -41,30 +41,70 @@ export default function Purpose() {
           
           <div className="bg-base-300 p-6 rounded-lg mb-4 overflow-x-auto border border-base-content border-opacity-10">
             <pre className="text-sm font-mono text-left whitespace-pre-wrap">
-{`# [ADR Title]
+              {`# [ADR Title]
 
-## Status
-[Proposed | Accepted | Deprecated | Superseded]
+              ## Status
+              [Proposed | Accepted | Deprecated | Superseded]
 
-## Context
-[Describe the issue or problem that necessitated this decision. Include relevant background information and constraints.]
+              ## Context
+              [Describe the issue or problem that necessitated this decision. Include relevant background information and constraints.]
 
-## Decision
-[Explain the decision that was made and why it was chosen. Include the rationale and key reasons behind this choice.]
+              ## Decision
+              [Explain the decision that was made and why it was chosen. Include the rationale and key reasons behind this choice.]
 
-## Consequences
-[Describe the results of adopting this decision. Include both positive outcomes and potential drawbacks or trade-offs.]
+              ## Consequences
+              [Describe the results of adopting this decision. Include both positive outcomes and potential drawbacks or trade-offs.]
 
-## Alternatives Considered
-[List other options that were evaluated and why they were not chosen.]
+              ## Alternatives Considered
+              [List other options that were evaluated and why they were not chosen.]
 
-## References
-[Include any relevant links, documentation, or resources.]`}
+              ## References
+              [Include any relevant links, documentation, or resources.]`}
             </pre>
           </div>
 
           <p className="text-lg leading-relaxed">
             This structured approach makes it easier to understand the reasoning behind past decisions and apply those lessons to future challenges.
+          </p>
+        </section>
+
+        <section className="bg-base-200 rounded-lg p-8 border border-info border-opacity-20 hover:border-opacity-40 transition-all">
+          <h2 className="text-3xl font-bold mb-4 text-info">Post Structure: Exploratory Research</h2>
+          <p className="text-lg leading-relaxed mb-4">
+            For topics where I am exploring an idea, pattern, or architectural approach rather than documenting a single decision, I use a lighter research-oriented format. This keeps the writing concise while still making room for examples, tradeoffs, and references.
+          </p>
+
+          <div className="bg-base-300 p-6 rounded-lg mb-4 overflow-x-auto border border-base-content border-opacity-10">
+            <pre className="text-sm font-mono text-left whitespace-pre-wrap">
+              {`# [Topic Title]
+
+              ## What It Is
+              [Provide a concise explanation of the concept or pattern.]
+
+              ## Why It Matters
+              [Explain why the topic is useful, relevant, or worth exploring.]
+
+              ## Pros
+              - [Key benefit]
+              - [Key benefit]
+
+              ## Cons
+              - [Key tradeoff]
+              - [Key tradeoff]
+
+              ## When to Use It
+              [Describe the situations where this approach is a strong fit.]
+
+              ## Examples
+              [Include practical scenarios, code snippets, or file structure examples.]
+
+              ## References
+              [Link to articles, documentation, or other sources.]`}
+            </pre>
+          </div>
+
+          <p className="text-lg leading-relaxed">
+            This format works well for posts like the vertical slice architecture article, where the goal is to explain an idea clearly, show where it helps, and acknowledge its tradeoffs.
           </p>
         </section>
       </div>
