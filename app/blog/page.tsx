@@ -13,12 +13,6 @@ export default function Blog() {
       publishedDate: 'July 16, 2026',
     },
     {
-      title: 'Habit Tracker Blog Project Workflow Scaffold',
-      href: '/blog/habit-tracker-project-workflow',
-      summary: 'A drop-in workflow scaffold for running a feature-first blog project with weekly execution and clear definition-of-done checks.',
-      publishedDate: 'July 16, 2026',
-    },
-    {
       title: 'Developer Quiz VS Code Extension',
       href: '/blog/developer-quiz-vscode-extension',
       summary: 'An architecture and workflow concept for a VS Code extension that asks doc-grounded quiz questions and evaluates answers with AI.',
