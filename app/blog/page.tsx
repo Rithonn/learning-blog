@@ -7,6 +7,24 @@ export default function Blog() {
   const { isOpen } = useSidebar();
   const posts = [
     {
+      title: 'Building a Habit Tracker in Public',
+      href: '/blog/habit-tracker-in-public',
+      summary: 'A staged look at a full-stack habit tracker: why the product started frontend-first, what architecture is already in place, and what needs to happen next to reach production readiness.',
+      publishedDate: 'July 16, 2026',
+    },
+    {
+      title: 'Habit Tracker Blog Project Workflow Scaffold',
+      href: '/blog/habit-tracker-project-workflow',
+      summary: 'A drop-in workflow scaffold for running a feature-first blog project with weekly execution and clear definition-of-done checks.',
+      publishedDate: 'July 16, 2026',
+    },
+    {
+      title: 'Developer Quiz VS Code Extension',
+      href: '/blog/developer-quiz-vscode-extension',
+      summary: 'An architecture and workflow concept for a VS Code extension that asks doc-grounded quiz questions and evaluates answers with AI.',
+      publishedDate: 'July 16, 2026',
+    },
+    {
       title: 'Vertical Slice Architecture',
       href: '/blog/vertical-slice-architecture',
       summary: 'A concise exploratory post on what vertical slice architecture is, why teams use it, and the tradeoffs that come with it.',
