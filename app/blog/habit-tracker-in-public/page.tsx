@@ -21,64 +21,74 @@ export default function HabitTrackerInPublicPost() {
             Building a Habit Tracker in Public
           </h1>
           <p className="text-lg text-base-content/70">
-            A practical look at a habit tracker being built in phases: validate the product experience early, keep the architecture intentional, and move toward production without a rewrite.
+            A build log on where the project is at, what I have been learning from an unfamiliar stack, and what still needs real implementation work.
           </p>
         </div>
 
         <article className="bg-base-200 rounded-lg p-8 border border-base-300 space-y-8">
           <section>
             <p className="text-lg leading-relaxed">
-              Most side projects start with a simple idea and quickly run into a familiar problem: the architecture grows faster than the product.
+              I wanted to write this one more like a real project checkpoint than a polished post.
             </p>
             <p className="text-lg leading-relaxed mt-3">
-              This Habit Tracker project is an attempt to do the opposite.
+              The Habit Tracker has been one of those projects where it is very easy to get distracted by architecture, backend setup, auth flows, deployment, and all the usual infrastructure work before the core product even feels good to use.
             </p>
             <p className="text-lg leading-relaxed mt-3">
-              The goal has been clear from day one: build a practical, daily-use habit app with journaling, monthly visibility, and a clean path to production. But instead of overbuilding early, the project is intentionally staged so each layer matures at the right time.
+              I have been trying not to do that here. The goal from the start was pretty simple: make a habit app I would actually want to use, make sure journaling fits naturally into it, and only then keep hardening the stack around that.
+            </p>
+            <p className="text-lg leading-relaxed mt-3">
+              Another reason I picked this project is that parts of the stack were not familiar to me. I wanted something real enough to force me to learn instead of just reading docs or following small tutorials. Building the app while figuring out Angular, the Go backend shape, and how those pieces should meet has probably been the most useful part of the whole thing.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">What the project is</h2>
+            <h2 className="text-2xl font-semibold mb-3">What I am building</h2>
             <p className="text-lg leading-relaxed mb-3">
-              At its core, this is a full-stack Habit Tracker designed around daily use rather than demo-only behavior.
+              At a high level, this is a full-stack habit tracker with a journaling layer built into the daily workflow.
             </p>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
               <li>Frontend: Angular application focused on habit completion and daily journaling</li>
               <li>Backend: Go API scaffold designed for authenticated, database-backed persistence</li>
               <li>Repo strategy: decoupled frontend and backend in a monorepo so both can evolve independently</li>
             </ul>
-            <p className="text-lg leading-relaxed mt-4 mb-3">The product experience is centered around:</p>
+            <p className="text-lg leading-relaxed mt-4 mb-3">The basic workflow I am aiming for is:</p>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
               <li>selecting a month</li>
               <li>checking habits per day</li>
               <li>writing short daily journal entries</li>
               <li>seeing progress over time</li>
             </ul>
+            <p className="text-lg leading-relaxed mt-4">
+              Nothing especially flashy. The whole point is for it to feel lightweight enough to use every day.
+            </p>
+            <p className="text-lg leading-relaxed mt-3">
+              It has also been a good excuse to learn by doing. I tend to understand new tools better when I have to make actual product decisions with them instead of building another throwaway demo.
+            </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Why the build started frontend-first</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why I started with the frontend</h2>
             <p className="text-lg leading-relaxed mb-3">
-              One of the biggest decisions was to prioritize a frontend-first workflow before completing full backend persistence.
+              The biggest call early on was to not wait for the backend to be fully real before building the main product flow.
             </p>
-            <p className="text-lg leading-relaxed mb-3">That choice delivered three immediate benefits:</p>
+            <p className="text-lg leading-relaxed mb-3">That helped in a few ways right away:</p>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
-              <li>Fast product iteration: the UX for habits and journaling could be tested immediately without waiting on full API implementation</li>
-              <li>Zero-cost momentum: local browser persistence kept development moving without deployment or infrastructure overhead</li>
-              <li>Stable UI contract early: by building screens and state models first, the API can later map to proven client needs instead of guessed requirements</li>
+              <li>I could test the habit and journaling flow immediately instead of designing API contracts in a vacuum</li>
+              <li>Local browser persistence let me keep moving without dealing with deployment or infrastructure up front</li>
+              <li>The frontend state and screens started revealing what the API actually needs to support</li>
+              <li>I could get comfortable with an unfamiliar stack by building visible features first instead of hiding in setup work</li>
             </ul>
             <p className="text-lg leading-relaxed mt-4">
-              In short: validate the user experience first, then harden the backend around it.
+              So the rough strategy became: make the UX feel real first, then make the backend catch up to it.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Where the project stands today</h2>
+            <h2 className="text-2xl font-semibold mb-3">Where the project is right now</h2>
             <p className="text-lg leading-relaxed mb-3">
-              The current state is best described as: strong product shell, backend seams in place, core integration still ahead.
+              Right now it feels like a strong shell with the right seams in place, but not a finished full-stack app yet.
             </p>
-            <h3 className="text-xl font-semibold mb-3">What is implemented now</h3>
+            <h3 className="text-xl font-semibold mb-3">What is already working</h3>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4 mb-5">
               <li>Vertical-slice frontend architecture is in place</li>
               <li>Dashboard flow is functional</li>
@@ -88,67 +98,69 @@ export default function HabitTrackerInPublicPost() {
               <li>Health check path from frontend to backend exists</li>
               <li>Backend routes, middleware, and feature boundaries are scaffolded</li>
             </ul>
-            <h3 className="text-xl font-semibold mb-3">What is intentionally not finished yet</h3>
+            <h3 className="text-xl font-semibold mb-3">What is still unfinished</h3>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
               <li>Backend business repositories still return not-implemented placeholders</li>
               <li>Full auth lifecycle is not wired end-to-end (register/login/me token flow)</li>
               <li>Frontend still relies mostly on local state as source of truth</li>
               <li>Production hardening items remain (smoke tests, observability, rate limiting, deployment settings)</li>
             </ul>
-            <p className="text-lg leading-relaxed mt-4">This is not accidental technical debt. It is staged delivery.</p>
+            <p className="text-lg leading-relaxed mt-4">
+              I do not really see that list as accidental mess. It is more that I have been choosing what to finish later on purpose instead of pretending everything needs to be production-ready on day one.
+            </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Architectural decisions already made</h2>
+            <h2 className="text-2xl font-semibold mb-3">Decisions I already feel good about</h2>
             <p className="text-lg leading-relaxed mb-4">
-              Several important foundation decisions are already locked in.
+              A few decisions have made the project easier to reason about, even though the implementation is still incomplete.
             </p>
 
             <div className="space-y-5">
               <div>
-                <h3 className="text-xl font-semibold mb-2">1. Vertical slice on the frontend</h3>
+                <h3 className="text-xl font-semibold mb-2">1. Vertical slices on the frontend</h3>
                 <p className="text-lg leading-relaxed">
-                  Instead of organizing by file type globally, features are grouped by business area such as auth, dashboard, and history. This keeps each slice coherent and reduces cross-folder overhead as the app grows.
+                  Grouping the frontend by feature instead of file type has already made the app easier to navigate. Auth stays with auth, dashboard stays with dashboard, and I do not have to bounce across a bunch of global folders to understand one feature.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">2. Thin, explicit Go backend layers</h3>
+                <h3 className="text-xl font-semibold mb-2">2. Keeping the Go backend layers explicit</h3>
                 <p className="text-lg leading-relaxed">
-                  The API uses clear handler to service to repository boundaries. That makes current placeholders obvious while giving a clean seam for swapping in real Postgres-backed repositories.
+                  The handler to service to repository split is probably the most useful backend decision so far. It makes the placeholders obvious, but it also means I know exactly where the real Postgres-backed code is supposed to land.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">3. Middleware and boundaries early</h3>
+                <h3 className="text-xl font-semibold mb-2">3. Putting middleware in early</h3>
                 <p className="text-lg leading-relaxed">
-                  Even before full data implementation, the backend includes structured logging, request validation patterns, auth middleware, and protected route grouping. This avoids a painful retrofit later.
+                  Even though the backend is not fully wired up, having logging, request validation patterns, auth middleware, and protected route groups in place already makes the shape of the API feel more real.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">4. Local persistence as a transition strategy</h3>
+                <h3 className="text-xl font-semibold mb-2">4. Using local persistence as a bridge</h3>
                 <p className="text-lg leading-relaxed">
-                  Using local browser storage now is a deliberate bridge, not the end state. It keeps user workflows intact while backend integration is brought online in phases.
+                  Local storage is not the destination, but it has been useful. It let me test whether the app flow actually works before forcing everything through the API.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-2">5. SSR compatibility decisions for charting and runtime behavior</h3>
+                <h3 className="text-xl font-semibold mb-2">5. Being careful about browser-only behavior</h3>
                 <p className="text-lg leading-relaxed">
-                  Frontend integration decisions have already accounted for browser-only behavior and rendering constraints, reducing deployment surprises later.
+                  Some frontend integration work already had to account for SSR and browser-only behavior, which is the kind of thing that is easy to ignore until deployment starts breaking.
                 </p>
               </div>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Why this matters</h2>
+            <h2 className="text-2xl font-semibold mb-3">Why I am building it this way</h2>
             <p className="text-lg leading-relaxed mb-3">
-              A lot of projects fail in the middle: too complex to keep moving, too incomplete to ship.
+              A lot of side projects die in the middle.
             </p>
             <p className="text-lg leading-relaxed mb-3">
-              This one is being built to avoid that trap through sequencing:
+              They get too complicated to keep moving on, but they never become complete enough to feel real either. I am trying to avoid that by working in this order:
             </p>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
               <li>prove UX</li>
@@ -157,14 +169,14 @@ export default function HabitTrackerInPublicPost() {
               <li>harden for production</li>
             </ul>
             <p className="text-lg leading-relaxed mt-4">
-              The team is optimizing for maintainability and delivery cadence, not just feature count.
+              That order just feels more honest for this project. I would rather have something usable with known gaps than a huge amount of backend code supporting a product flow that still feels wrong.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">What comes next</h2>
+            <h2 className="text-2xl font-semibold mb-3">What I need to do next</h2>
             <p className="text-lg leading-relaxed mb-3">
-              The next major milestone is end-to-end API reality.
+              The next big step is making the backend real enough that the frontend can stop treating local state as the main source of truth.
             </p>
             <ul className="list-disc list-inside space-y-2 text-lg leading-relaxed pl-4">
               <li>Implement real auth issuing and verification flow</li>
@@ -175,17 +187,17 @@ export default function HabitTrackerInPublicPost() {
               <li>Close go-live checklist items for observability and deployment</li>
             </ul>
             <p className="text-lg leading-relaxed mt-4">
-              Once those are complete, the project transitions from frontend-first prototype architecture to production-capable full stack.
+              Once those pieces are in place, the project stops being mostly a frontend-first prototype and starts feeling like an actual production path.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-3">Final takeaway</h2>
+            <h2 className="text-2xl font-semibold mb-3">Current takeaway</h2>
             <p className="text-lg leading-relaxed">
-              This Habit Tracker is already beyond the toy stage. The product experience is tangible, the architecture is intentional, and the path forward is concrete.
+              The Habit Tracker is in a good place, but it is definitely still in-between stages.
             </p>
             <p className="text-lg leading-relaxed mt-3">
-              What exists today is not a half-finished app. It is a deliberately phased system: usable now, extensible next, and built to scale without rewriting from scratch.
+              The product flow is real enough to use and evaluate, the architecture is clear enough that I know where the missing work belongs, and the next milestones are obvious. That is honestly the main thing I wanted at this stage.
             </p>
           </section>
         </article>

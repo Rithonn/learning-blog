@@ -9,7 +9,7 @@ export default function Blog() {
     {
       title: 'Building a Habit Tracker in Public',
       href: '/blog/habit-tracker-in-public',
-      summary: 'A staged look at a full-stack habit tracker: why the product started frontend-first, what architecture is already in place, and what needs to happen next to reach production readiness.',
+      summary: 'A dev-log style update on the habit tracker: what I have built so far, why I started with the frontend, how I used an unfamiliar stack to learn, and what I still need to finish.',
       publishedDate: 'July 16, 2026',
     },
     {
