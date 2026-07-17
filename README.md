@@ -41,3 +41,26 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Show tags on blog cards and post pages.
 - [ ] Add tag-based filtering on the blog index page.
 - [ ] Add a keyword search that can work together with selected tags.
+
+## Architecture and Design Topics to Discuss
+
+- [ ] When not to use Clean/Onion/Hexagonal architecture.
+- [ ] Vertical Slice plus CQRS in small apps: when it helps and when it overcomplicates.
+- [ ] Architecture Decision Records (ADRs): documenting decisions and tradeoffs.
+- [ ] Modular monolith vs microservices and practical migration paths.
+- [ ] Domain-Driven Design boundaries: bounded contexts and ubiquitous language.
+- [ ] API design for evolvability: versioning and backward compatibility.
+- [ ] Event-driven architecture essentials: eventual consistency and idempotency.
+- [ ] Resilience patterns: retries, circuit breakers, bulkheads, and timeouts.
+- [ ] Caching strategies and architectural impact: cache-aside, write-through, invalidation.
+- [ ] Multi-tenant architecture patterns: row, schema, and database per tenant.
+- [ ] Designing for observability: logs, traces, metrics, and correlation IDs.
+- [ ] Security architecture fundamentals: threat modeling and least privilege.
+- [ ] Data consistency patterns: outbox and saga orchestration/choreography.
+- [ ] Feature flags as an architectural tool for safer releases.
+- [ ] Architecture anti-patterns series: god services, shared databases, over-abstraction.
+- [ ] Testing architecture decisions: contract tests and fitness functions.
+- [ ] Frontend architecture for Next.js apps: feature boundaries and state ownership.
+- [ ] Evolutionary architecture: refactoring safely without large rewrites.
+- [ ] Team topology, Conway's Law, and architecture outcomes.
+- [ ] End-to-end case study: from requirements to architecture to implementation.
