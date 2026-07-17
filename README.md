@@ -34,3 +34,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Project TODO
+
+- [ ] Add a tags field to each blog post entry (for example: architecture, csharp, dotnet, devlog).
+- [ ] Show tags on blog cards and post pages.
+- [ ] Add tag-based filtering on the blog index page.
+- [ ] Add a keyword search that can work together with selected tags.

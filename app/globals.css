@@ -24,3 +24,51 @@
 body {
   @apply bg-base-100 text-base-content;
 }
+
+::view-transition-old(.page-exit) {
+  animation:
+    180ms ease-out both route-fade-out,
+    220ms ease-out both route-slide-out;
+}
+
+::view-transition-new(.page-enter) {
+  animation:
+    260ms ease-in both route-fade-in,
+    260ms ease-in both route-slide-in;
+}
+
+@keyframes route-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes route-slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes route-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes route-slide-in {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

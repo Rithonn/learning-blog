@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ViewTransition } from 'react';
 import './globals.css';
 import { SidebarProvider } from './context/SidebarContext';
 import Sidebar from './components/sidebar/Sidebar';
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SidebarProvider>
           <Sidebar />
-          {children}
+          <ViewTransition enter="page-enter" exit="page-exit">
+            {children}
+          </ViewTransition>
         </SidebarProvider>
       </body>
     </html>
