@@ -29,6 +29,27 @@ export default function Blog() {
   const { isOpen } = useSidebar();
   const posts: BlogPost[] = [
     {
+      title: 'Comparing Common Architecture Patterns',
+      href: '/blog/comparing-architecture-patterns',
+      summary: 'A practical comparison of common architecture patterns with a quick-scan matrix, detailed differences, and examples for each approach.',
+      publishedDate: 'July 20, 2026',
+      tags: [BlogTag.ArchitectureDesign, BlogTag.Research],
+    },
+    {
+      title: 'Hexagonal Architecture',
+      href: '/blog/hexagonal-architecture',
+      summary: 'A practical guide to hexagonal architecture, how ports and adapters work, and when this style helps isolate core application logic.',
+      publishedDate: 'July 20, 2026',
+      tags: [BlogTag.ArchitectureDesign, BlogTag.Research],
+    },
+    {
+      title: 'Clean Architecture',
+      href: '/blog/clean-architecture',
+      summary: 'A practical guide to clean architecture, how the dependency rule works, and when the added structure is worth it.',
+      publishedDate: 'July 20, 2026',
+      tags: [BlogTag.ArchitectureDesign, BlogTag.Research],
+    },
+    {
       title: 'The Options Pattern',
       href: '/blog/options-pattern-csharp',
       summary: 'A practical guide to configuring, validating, and consuming strongly typed options in .NET using IOptions, IOptionsSnapshot, and IOptionsMonitor.',
