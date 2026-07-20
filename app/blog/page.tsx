@@ -31,6 +31,13 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
   const posts: BlogPost[] = [
     {
+      title: 'Modern Web Development Vocabulary and Patterns',
+      href: '/blog/web-development-patterns-and-workflows',
+      summary: 'A practical guide to common words, design patterns, and implementation workflows that modern web developers should know.',
+      publishedDate: 'July 20, 2026',
+      tags: [BlogTag.ArchitectureDesign, BlogTag.Research],
+    },
+    {
       title: 'Comparing Common Architecture Patterns',
       href: '/blog/comparing-architecture-patterns',
       summary: 'A practical comparison of common architecture patterns with a quick-scan matrix, detailed differences, and examples for each approach.',
