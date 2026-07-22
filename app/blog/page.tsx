@@ -31,6 +31,13 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
   const posts: BlogPost[] = [
     {
+      title: 'From README to Website',
+      href: '/blog/from-readme-to-leathercraft-site',
+      summary: 'A practical migration plan for turning my leather-info-repo README into a full Next.js website while keeping the same framework as this blog.',
+      publishedDate: 'July 22, 2026',
+      tags: [BlogTag.ProjectIdeas, BlogTag.OngoingProjects],
+    },
+    {
       title: 'Modern Web Development Vocabulary and Patterns',
       href: '/blog/web-development-patterns-and-workflows',
       summary: 'A practical guide to common words, design patterns, and implementation workflows that modern web developers should know.',
